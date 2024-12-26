@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Text Timer</string>
-    <string name="start" translatable="true">старт</string>
-    <string name="stop" translatable="true">стоп</string>
+
+    <string name="start">старт</string>
+    <string name="stop">стоп</string>
 
     <string-array name="units">
         <item>один</item>

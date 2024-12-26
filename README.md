@@ -1,26 +1,12 @@
 # Text Timer
 
-<img align="right" width="120" src="img/sample-icon.png">
-
-The project is a simple Android application with two activities developed in [Kotlin](https://github.com/JetBrains/kotlin) as a training task at the very start of the Android App Development Course by the [Technotrack](https://track.mail.ru/) educational project. The application represents a stopwatch, which counts upwards from zero for measuring elapsed time, showing the time in the way how we pronounce it, e.g. `one hundred forty-four` for 144. The interface is available in German, Russian and English by deafult. Appropriate language will be applied, depending on your system language.
+This project is a basic Android Wear OS application developed in [Kotlin](https://github.com/JetBrains/kotlin) and [Jetpack Compose](https://developer.android.com/compose). It serves as a training exercise to familiarize myself with Jetpack Compose and Wear OS development. The application functions as a stopwatch, counting upwards from zero to measure elapsed time. The time is displayed in spoken form, such as `one hundred forty-four` for 144. The interface is available in German, Russian, and English by default. The application automatically selects the appropriate language based on your system settings.
 
 ## Usage
 
-Splash Screen                       | Before Start                       | After Start
-:----------------------------------:|:----------------------------------:|:---------------------------------:
-![Splash Screen](img/sample-01.png) | ![Before Start](img/sample-02.png) | ![After Start](img/sample-03.png)
+<img src="img/sample.png" alt="drawing" width="500"/>
 
 When you stop the timer, you can continue from the point of stopping by clicking on the start. At the expiration of 1000 seconds, the timer will stop, and then you can start again from zero.
-
-## Building
-
-Run [Gradle](https://github.com/gradle/gradle) from the root directory of the project to build it.
-
-``` bash
-./gradlew build
-```
-
-After completion there will be two directories in app/build/outputs/apk with apk files for debug and release.
 
 ## License
 

@@ -1,7 +1,7 @@
-package ru.mail.track.android.alxiw.texttimer.tools
+package io.github.alxiw.texttimer.tools
 
 import android.content.res.Resources
-import ru.mail.track.android.alxiw.texttimer.R
+import io.github.alxiw.texttimer.R
 import java.util.*
 
 class CountTextFormatter(resources: Resources) {
@@ -12,10 +12,12 @@ class CountTextFormatter(resources: Resources) {
     private val hundreds: Array<String> = resources.getStringArray(R.array.hundreds)
     private val thousands: Array<String> = resources.getStringArray(R.array.thousands)
 
-    fun formatCountToText(timerCount: Int): String = when {
-        Locale.getDefault().language == "de" -> german(timerCount)
-        Locale.getDefault().language == "ru" -> russian(timerCount)
-        else -> default(timerCount)
+    fun formatCountToText(timerCount: Int): String {
+        return when (Locale.getDefault().language) {
+            "de" -> german(timerCount)
+            "ru" -> russian(timerCount)
+            else -> default(timerCount)
+        }
     }
 
     private fun default(timerCount: Int): String {

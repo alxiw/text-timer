@@ -1,8 +1,11 @@
 *.iml
-.idea
 .gradle
+.gitconfig
 /local.properties
+.idea
 .DS_Store
 /build
+/app/build/
 /captures
 .externalNativeBuild
+.kotlin
