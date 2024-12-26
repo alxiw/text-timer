@@ -2,9 +2,10 @@ package io.github.alxiw.texttimer.tools
 
 import android.content.res.Resources
 import io.github.alxiw.texttimer.R
-import java.util.*
 
 class CountTextFormatter(resources: Resources) {
+
+    private val lang = resources.configuration.getLocales().get(0).language
 
     private val units: Array<String> = resources.getStringArray(R.array.units)
     private val teens: Array<String> = resources.getStringArray(R.array.teens)
@@ -13,11 +14,16 @@ class CountTextFormatter(resources: Resources) {
     private val thousands: Array<String> = resources.getStringArray(R.array.thousands)
 
     fun formatCountToText(timerCount: Int): String {
-        return when (Locale.getDefault().language) {
+        when {
+            timerCount <= 0 -> return ""
+            timerCount > 1000 -> return "∞"
+        }
+
+        return when (lang) {
             "de" -> german(timerCount)
             "ru" -> russian(timerCount)
             else -> default(timerCount)
-        }
+        }.trim()
     }
 
     private fun default(timerCount: Int): String {
@@ -84,15 +90,9 @@ class CountTextFormatter(resources: Resources) {
     private fun buildPrefix(timerCount: Int): String {
         var prefix = ""
 
-        if (timerCount > 1000) {
-            return "∞"
-        }
-
         if (timerCount / 1000 != 0) {
             prefix += thousands[timerCount / 1000 - 1]
-        }
-
-        if (timerCount / 100 != 0) {
+        } else if (timerCount / 100 != 0) {
             prefix += hundreds[timerCount / 100 - 1]
         }
 

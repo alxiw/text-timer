@@ -48,6 +48,12 @@ class TimerViewModel : ViewModel() {
         timerStateMutable.value = TimerState(timerCount, State.Stop)
     }
 
+    fun resetTimer() {
+        timer.cancel()
+        timerCount = 0L
+        timerStateMutable.value = TimerState(0L, State.Stop)
+    }
+
     override fun onCleared() {
         super.onCleared()
         timer.cancel()

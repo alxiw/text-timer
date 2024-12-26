@@ -6,7 +6,7 @@ This project is a basic Android Wear OS application developed in [Kotlin](https:
 
 <img src="img/sample.png" alt="drawing" width="500"/>
 
-When you stop the timer, you can continue from the point of stopping by clicking on the start. At the expiration of 1000 seconds, the timer will stop, and then you can start again from zero.
+When you stop the timer, you can continue from the point of stopping by clicking on the start. At the expiration of 1000 seconds, the timer will stop, and then you can start again from zero. You can also reset the time by double-tapping on a blank area of the screen.
 
 ## License
 
